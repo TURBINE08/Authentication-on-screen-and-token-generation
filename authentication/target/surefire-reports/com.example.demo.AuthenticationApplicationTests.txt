@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.example.demo.AuthenticationApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 3.106 s <<< FAILURE! - in com.example.demo.AuthenticationApplicationTests
+contextLoads  Time elapsed: 0.01 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'configure' defined in class path resource [com/example/demo/config/MySecurityConfig.class]: Invalid factory method 'configure' on class [com.example.demo.config.MySecurityConfig]: needs to have a non-void return type!
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'configure' defined in class path resource [com/example/demo/config/MySecurityConfig.class]: Invalid factory method 'configure' on class [com.example.demo.config.MySecurityConfig]: needs to have a non-void return type!
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'configure' defined in class path resource [com/example/demo/config/MySecurityConfig.class]: Invalid factory method 'configure' on class [com.example.demo.config.MySecurityConfig]: needs to have a non-void return type!
+
